@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* utill */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -18,9 +20,8 @@ header {
 }
 
 .progress_bar {
-    /* background-color: red; */
     width: 100%;
-    max-width: 850px;
+    max-width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,17 +33,22 @@ header {
         justify-content: center;
         width: 3rem;
         height: 3rem;
-        background-color:lightgray;
+        background-color: lightgray;
         border-radius: 50%;
+        z-index: -2;
+
+        &>span {
+            background-color: black !important;
+        }
     }
 
     &::before,
     &::after {
         content: '';
-        z-index: -1;
+        z-index: 1;
         position: absolute;
         height: 1rem;
-        border-radius: 40px;
+        border-radius: 50px;
     }
 
     &::before {
@@ -52,153 +58,172 @@ header {
     }
 
     &::after {
+        transition: all 3s;
         width: 0%;
-        /* background-color: red; */
-        transition: all 1s;
     }
 }
-.circle1{
+
+.circle1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    background-color:orange;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: orange;
     border-radius: 50%;
-}
-.circle-orng{
-    background-color:lightgray;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        color: white;
-        border-radius: 50%;
-}
-.circle-bl{
-    background-color:lightgray;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        color: white;
-}
-.circle2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    background-color:rgb(63, 36, 216);
-    border-radius: 50%;
-}
-.circle-g{
-    background-color:lightgray;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        color: white;
-}
-.circle3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    background-color:green;
-    border-radius: 50%;
+    z-index: 1;
 }
 
-.circle-r{
-    background-color:lightgray;
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        color: white;
+.ccl {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+
 }
-.circle4{
+
+.size1 {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    display: inline-flex;
+}
+
+.circle-orng {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.circle-bl {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.logo1 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    background-color:red;
+    background-color: rgb(63, 36, 216);
     border-radius: 50%;
+    z-index: 2;
+}
+
+.circle-g {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.logo-tick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.circle-r {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 2;
 }
 
 .progress_bar:hover::after {
-    width: 100%;
+    width: 95%;
+
 }
 
-.blue-progress:hover::after {
+.blue-progress::after {
     background-color: blue;
-width: 40%;
+    width: 40%;
+    height: 10%;
+    left: 2%;
 }
 
-.green-progress:hover::after {
+.green-progress::after {
     background-color: green;
-    width: 100%;
+    height: 10%;
+    left: 2%;
 }
+
 .red-progress::after {
-    background-color:red;
+    background-color: red;
     width: 50%;
+    height: 10%;
+    left: 2%;
 }
-
-
 
 .sub-container {
-    margin: 15px 0;
+    margin: 1% 0;
     display: flex;
     justify-content: space-between;
-    
-}
-.sub-container flex space -betwee{
-    margin-bottom: 13px;
+
+    &>span {
+        min-width: 8.25%;
+        text-align: start;
+    }
 }
 
-.flex {
-    display: flex;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
-.color1 {
+.orange {
     color: orange;
 }
 
-.color2 {
+.blue {
     color: blue;
 }
 
-.color3 {
+.green {
     color: green;
 }
 
-.color4 {
+.red {
     color: red;
 }
 
-.color5 {
-    color: green;
-}
-
-.color6 {
-    color: red;
-}
 .fa-solid {
-font-size: 20px;
+    font-size: 20px;
 }
-.fa-regular{
+
+.fa-regular {
     font-size: 20px;
 }
